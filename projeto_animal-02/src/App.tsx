@@ -1,7 +1,8 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import React, { useRef } from 'react';
+import './App.css';
+import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
+  setupIonicReact } from '@ionic/react';
+import AnimalCard from './components/Card.tsx';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,27 +31,56 @@ import '@ionic/react/css/display.css';
 /* import '@ionic/react/css/palettes/dark.class.css'; */
 import '@ionic/react/css/palettes/dark.system.css';
 
-/* Theme variables */
-import './theme/variables.css';
-
 setupIonicReact();
+const App: React.FC = () => {
+  const animals = useRef([
+    {
+      id: 1,
+      name: 'Leão',
+      image: '/favicon.png', // Use uma URL válida de imagem
+      description: 'O leão é o rei da selva, conhecido por sua força e coragem.'
+    },
+    {
+      id: 2,
+      name: 'Elefante',
+      image: 'https://example.com/elephant.jpg',
+      description: 'Os elefantes são conhecidos pela sua inteligência e tamanho imponente.'
+    },
+    {
+      id: 3,
+      name: 'Panda',
+      image: 'https://example.com/panda.jpg',
+      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.'
+    }
+    // Adicione mais animais conforme necessário
+  ]);
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        
-        <Route exact path="/home">
-          <Home />
-        </Route>
+  console.log(animals)
 
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+  return (
+    <IonApp>
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Cards de Animais</IonTitle>
+          </IonToolbar>
+        </IonHeader>
 
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+        <IonContent  fullscreen={true} className="ion-padding">
+          <div className="card-container">
+            {animals.current.map((animal) => (
+              <AnimalCard
+                key={animal.id}
+                name={animal.name}
+                image={animal.image}
+                description={animal.description}
+              />
+            ))}
+          </div>
+        </IonContent>
+      </IonPage>
+    </IonApp>
+  );
+};
 
 export default App;
