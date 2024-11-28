@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import './App.css';
 import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
-  setupIonicReact } from '@ionic/react';
-import AnimalCard from './components/Card.tsx';
+  setupIonicReact, IonSearchbar } from '@ionic/react';
+  import AnimalCard from './components/Card.tsx';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,7 +32,7 @@ import '@ionic/react/css/display.css';
 import '@ionic/react/css/palettes/dark.system.css';
 
 setupIonicReact();
-const App: React.FC = () => {
+const App = () => {
   const animals = useRef([
     {
       id: 1,
@@ -62,11 +62,12 @@ const App: React.FC = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Cards de Animais</IonTitle>
+            <IonTitle>MEUS PETS</IonTitle>
           </IonToolbar>
         </IonHeader>
 
         <IonContent  fullscreen={true} className="ion-padding">
+        <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
           <div className="card-container">
             {animals.current.map((animal) => (
               <AnimalCard
