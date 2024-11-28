@@ -61,9 +61,9 @@ const App = () => {
     <IonApp>
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonTitle>MEUS PETS</IonTitle>
-          </IonToolbar>
+          <div className="cantaine">
+            <IonTitle className='meus-pets'>MEUS PETS</IonTitle>
+            </div>
         </IonHeader>
 
         <IonContent  fullscreen={true} className="ion-padding">
