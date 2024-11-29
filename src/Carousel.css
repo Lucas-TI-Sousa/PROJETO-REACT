@@ -1,0 +1,76 @@
+
+.carousel-container {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.carousel-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 350px; /* Ajustando a altura do carrossel para acomodar a imagem */
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.card-image {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: 150px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Mantém a proporção e cobre o espaço disponível */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Espaço entre a imagem e o conteúdo do card */
+}
+
+.card-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 15px
+  
+  
+}
+
+.card-button:hover {
+  background-color: #45a049;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

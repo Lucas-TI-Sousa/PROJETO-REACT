@@ -3,6 +3,7 @@ import './App.css';
 import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
   setupIonicReact, IonSearchbar } from '@ionic/react';
   import AnimalCard from './components/Card.tsx';
+  import Carousel from './Carousel';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -20,6 +21,7 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -36,14 +38,14 @@ const App = () => {
   const animals = useRef([
     {
       id: 1,
-      name: 'Leão',
-      image: '/favicon.png', // Use uma URL válida de imagem
+      name: 'Cachorro',
+      image: '/pastor-alemão.jpg', // Use uma URL válida de imagem
       description: 'O leão é o rei da selva, conhecido por sua força e coragem.'
     },
     {
       id: 2,
-      name: 'Elefante',
-      image: 'https://example.com/elephant.jpg',
+      name: 'Cachorro',
+      image: '/pit-bull.avif',
       description: 'Os elefantes são conhecidos pela sua inteligência e tamanho imponente.'
     },
     {
@@ -68,6 +70,10 @@ const App = () => {
 
         <IonContent  fullscreen={true} className="ion-padding">
         <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
+        <div>
+      <h1>Carrossel de Cards</h1>
+      <Carousel />
+    </div>
           <div className="card-container">
             {animals.current.map((animal) => (
               <AnimalCard
