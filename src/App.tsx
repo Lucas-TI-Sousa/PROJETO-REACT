@@ -3,7 +3,7 @@ import './App.css';
 import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, 
   setupIonicReact, IonSearchbar } from '@ionic/react';
   import AnimalCard from './components/Card.tsx';
-  import Carousel from './Carousel';
+  import CardCarousel from './CardCarousel'; 
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -72,7 +72,7 @@ const App = () => {
         <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
         <div>
       <h1>Carrossel de Cards</h1>
-      <Carousel />
+      <CardCarousel />
     </div>
           <div className="card-container">
             {animals.current.map((animal) => (
