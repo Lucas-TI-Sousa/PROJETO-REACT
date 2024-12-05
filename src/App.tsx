@@ -72,8 +72,10 @@ const App = () => {
         <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
         <div>
       <h1>Carrossel de Cards</h1>
-      <CardCarousel />
-    </div>
+      <CardCarousel animal="Cachorro" slides={animals.current}/>
+      <CardCarousel animal="Animais Fofos" />
+      {/* <CardCarousel animal="gato" /> */}
+        </div>
           <div className="card-container">
             {animals.current.map((animal) => (
               <AnimalCard
