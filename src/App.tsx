@@ -70,10 +70,13 @@ const App = () => {
 
         <IonContent  fullscreen={true} className="ion-padding">
         <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
-        <div>
-      <h1>Carrossel de Cards</h1>
-      <CardCarousel animal="Cachorro"/>
-      <CardCarousel animal="Animais Fofos" />
+          <h2>ANIMAIS PARA ADOÇÃO</h2>
+        <div className='card-app'>
+      <CardCarousel animal="Cachorro" />
+      <CardCarousel animal="Gato" />
+      <CardCarousel animal="Cobra" />
+      <CardCarousel animal="Pássaros" />
+      <CardCarousel animal="Roedores" />
         </div>
           {/* <div className="card-container">
             {animals.current.map((animal) => (

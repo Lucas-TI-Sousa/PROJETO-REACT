@@ -66,7 +66,7 @@ const CardCarousel = ({ animal }) => {
                   src={animal.image}
                   alt={animal.name}
                   className="card-image"
-                  style={{ width: '100%', height: 'auto' }}
+                  style={{ width: '100%', height: '120px' }}
                 />
                 <h3>{animal.name}</h3>
                 {/* <p>{animal.description}</p> */}

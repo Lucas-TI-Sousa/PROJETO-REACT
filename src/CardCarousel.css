@@ -4,19 +4,20 @@
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
-    padding: 16px;
+    padding: 10px;
   }
   .card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 8px;
+    height: 180px;
     text-align: center;
   
   }
   
   .card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #333;
   }
   
@@ -28,8 +29,8 @@
   .card-image {
     border-radius: 10px;
     object-fit: cover;
-    max-height: 200px;
-    margin-bottom: 10px;
+    /* max-height: 150px; */
+    margin-bottom: 2px;
   }
   
   .swiper-container {
