@@ -17,6 +17,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({ name, image, description }) => 
       <IonCardContent>
         <p>{description}</p>
       </IonCardContent>
+      
     </IonCard>
   );
 };

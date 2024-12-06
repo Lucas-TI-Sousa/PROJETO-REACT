@@ -1,6 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Importando os estilos do Swiper
+import AnimalCard from './components/Card.tsx';
+ import 'swiper/swiper-bundle.css';
+import './CardCarousel.css';
+import { IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 
 const CardCarousel = ({ animal }) => {
   const animals = useRef([
@@ -32,50 +35,75 @@ const CardCarousel = ({ animal }) => {
       id: 3,
       name: 'Panda',
       image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      // description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+      //  description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
     },
     // Adicione mais animais conforme necessário
   ]);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <h1>{animal}</h1>
+      <h4>{animal}</h4>
       <Swiper
         slidesPerView={3} // Exibe 3 cartões por vez
         loop={true} // Faz o loop dos slides
         spaceBetween={20} // Espaçamento entre os slides
-        navigation={true} // Habilita a navegação com setas (opcional)
         breakpoints={{
-          // Ajuste o número de slides exibidos em diferentes tamanhos de tela
-          // 768: {
-          //   slidesPerView: 2,
-          // },
-          // 480: {
-          //   slidesPerView: 1,
-          // },
+
+          768: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1,
+          },
         }}
       >
         <div className="card-container">
-        {animals.current.map((animal) => (
-          <SwiperSlide key={animal.id}>
-            <div className="card">
-              <img
-                src={animal.image}
-                alt={animal.name}
-                className="card-image"
-                style={{ width: '100%', height: 'auto' }}
-              />
-              <h3>{animal.name}</h3>
-              <p>{animal.description}</p>
-            </div>
-          </SwiperSlide>
-        ))}
+          {animals.current.map((animal) => (
+            <SwiperSlide key={animal.id}>
+              <div className="card">
+                <img
+                  src={animal.image}
+                  alt={animal.name}
+                  className="card-image"
+                  style={{ width: '100%', height: 'auto' }}
+                />
+                <h3>{animal.name}</h3>
+                {/* <p>{animal.description}</p> */}
+              </div>
+            </SwiperSlide>
+          ))}
         </div>
       </Swiper>
+      <IonModal isOpen={isOpen}>
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Modal</IonTitle>
+              <IonButtons slot="end">
+                <IonButton onClick={() => setIsOpen(false)}>Close</IonButton>
+              </IonButtons>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent className="ion-padding">
+          <div className="card-container">
+            {animals.current.map((animal) => (
+              <AnimalCard
+                key={animal.id}
+                name={animal.name}
+                image={animal.image}
+                description={animal.description}
+              />
+            ))}
+          </div>
+            {/* <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+              reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui.
+              Eaque, dicta.
+            </p> */}
+          </IonContent>
+        </IonModal>
     </>
-  );
+  )
 };
-
 export default CardCarousel;
-
 

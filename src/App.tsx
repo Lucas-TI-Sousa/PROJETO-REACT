@@ -35,29 +35,29 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 setupIonicReact();
 const App = () => {
-  const animals = useRef([
-    {
-      id: 1,
-      name: 'Cachorro',
-      image: '/pastor-alemão.jpg', // Use uma URL válida de imagem
-      description: 'O leão é o rei da selva, conhecido por sua força e coragem.'
-    },
-    {
-      id: 2,
-      name: 'Cachorro',
-      image: '/pit-bull.avif',
-      description: 'Os elefantes são conhecidos pela sua inteligência e tamanho imponente.'
-    },
-    {
-      id: 3,
-      name: 'Panda',
-      image: 'https://example.com/panda.jpg',
-      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.'
-    }
-    // Adicione mais animais conforme necessário
-  ]);
+  // const animals = useRef([
+  //   {
+  //     id: 1,
+  //     name: 'Cachorro',
+  //     image: '/pastor-alemão.jpg', // Use uma URL válida de imagem
+  //     description: 'O leão é o rei da selva, conhecido por sua força e coragem.'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Cachorro',
+  //     image: '/pit-bull.avif',
+  //     description: 'Os elefantes são conhecidos pela sua inteligência e tamanho imponente.'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Panda',
+  //     image: 'https://example.com/panda.jpg',
+  //     description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.'
+  //   }
+  //   // Adicione mais animais conforme necessário
+  // ]);
 
-  console.log(animals)
+  // console.log(animals)
 
   return (
     <IonApp>
@@ -72,11 +72,10 @@ const App = () => {
         <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
         <div>
       <h1>Carrossel de Cards</h1>
-      <CardCarousel animal="Cachorro" slides={animals.current}/>
+      <CardCarousel animal="Cachorro"/>
       <CardCarousel animal="Animais Fofos" />
-      {/* <CardCarousel animal="gato" /> */}
         </div>
-          <div className="card-container">
+          {/* <div className="card-container">
             {animals.current.map((animal) => (
               <AnimalCard
                 key={animal.id}
@@ -85,7 +84,7 @@ const App = () => {
                 description={animal.description}
               />
             ))}
-          </div>
+          </div> */}
         </IonContent>
       </IonPage>
     </IonApp>
