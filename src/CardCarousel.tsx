@@ -6,44 +6,55 @@ import './CardCarousel.css';
 import { IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 
 const CardCarousel = ({ animal }) => {
+
   const animals = useRef([
     {
       id: 1,
       name: 'Cachorro',
       image: '/pastor-alemão.jpg', // Substitua com o caminho correto ou URL da imagem
-      // description: 'O pastor alemão é conhecido por sua inteligência e lealdade.',
+      description: 'O pastor alemão é conhecido por sua inteligência e lealdade.',
     },
     {
       id: 2,
       name: 'Pit Bull',
       image: '/pit-bull.avif',
-      // description: 'O pit bull é um cão forte e corajoso, conhecido por sua lealdade.',
+      description: 'O pit bull é um cão forte e corajoso, conhecido por sua lealdade.',
     },
     {
       id: 3,
       name: 'Panda',
       image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      // description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Panda',
       image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      // description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
     },
     {
-      id: 3,
+      id: 5,
       name: 'Panda',
       image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      //  description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+       description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
     },
     // Adicione mais animais conforme necessário
   ]);
+
   const [isOpen, setIsOpen] = useState(false);
+  const [imagem, salvarImage] = useState([])
+
+
+
+  function openModal(animal) {
+    console.log(animal)
+    setIsOpen(true)
+    salvarImage(animal)
+  }
 
   return (
     <>
-      <h4>{animal}</h4>
+      <h4 className='titulo'>{animal}</h4>
       <Swiper
         slidesPerView={3} // Exibe 3 cartões por vez
         loop={true} // Faz o loop dos slides
@@ -61,7 +72,7 @@ const CardCarousel = ({ animal }) => {
         <div className="card-container">
           {animals.current.map((animal) => (
             <SwiperSlide key={animal.id}>
-              <div className="card">
+              <div className="card" onClick={() => openModal(animal)}>
                 <img
                   src={animal.image}
                   alt={animal.name}
@@ -75,6 +86,8 @@ const CardCarousel = ({ animal }) => {
           ))}
         </div>
       </Swiper>
+
+      
       <IonModal isOpen={isOpen}>
           <IonHeader>
             <IonToolbar>
@@ -86,14 +99,19 @@ const CardCarousel = ({ animal }) => {
           </IonHeader>
           <IonContent className="ion-padding">
           <div className="card-container">
-            {animals.current.map((animal) => (
+          <AnimalCard
+                name={imagem.name}
+                image={imagem.image}
+                description={imagem.description}
+              />
+            {/*animals.current.map((animal) => (
               <AnimalCard
                 key={animal.id}
                 name={animal.name}
                 image={animal.image}
                 description={animal.description}
               />
-            ))}
+            ))*/}
           </div>
             {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos

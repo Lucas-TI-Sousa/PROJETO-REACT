@@ -6,6 +6,10 @@
     padding: 16px;
     
   }
+  ion-content{
+    --background: linear-gradient(to bottom, rgba(9, 156, 175, 0) 50%, rgb(10, 228, 235)); */
+ 
+  }
   
   ion-card {
     width: 300px;
@@ -42,6 +46,7 @@
     text-align: center;
 
   }
-  .card-app {
-
+  h2{
+    justify-content: center;
+    text-align: center;
   }
