@@ -7,7 +7,7 @@
     
   }
   ion-content{
-    --background: linear-gradient(to bottom, rgba(9, 156, 175, 0) 50%, rgb(10, 228, 235)); */
+    --background: linear-gradient(to bottom, rgba(9, 156, 175, 0) 50%, rgb(17, 231, 199)); */
  
   }
   
@@ -37,7 +37,7 @@
     text-align: center;
     height: 80px;
     font-size: 30px;
-    background-color: aqua;
+    background-color: #11e7c7;
     color: white;
   }
   

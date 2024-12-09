@@ -43,6 +43,7 @@ const CardCarousel = ({ animal }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [imagem, salvarImage] = useState([])
+  
 
 
 
