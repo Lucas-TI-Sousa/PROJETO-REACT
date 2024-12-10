@@ -5,41 +5,45 @@ import AnimalCard from './components/Card.tsx';
 import './CardCarousel.css';
 import { IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 
-const CardCarousel = ({ animal }) => {
+/** 
+ * animal: nome do animal
+ * list: acessa o array  de animais */
 
-  const animals = useRef([
-    {
-      id: 1,
-      name: 'Cachorro',
-      image: '/pastor-alemão.jpg', // Substitua com o caminho correto ou URL da imagem
-      description: 'O pastor alemão é conhecido por sua inteligência e lealdade.',
-    },
-    {
-      id: 2,
-      name: 'Pit Bull',
-      image: '/pit-bull.avif',
-      description: 'O pit bull é um cão forte e corajoso, conhecido por sua lealdade.',
-    },
-    {
-      id: 3,
-      name: 'Panda',
-      image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
-    },
-    {
-      id: 4,
-      name: 'Panda',
-      image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
-    },
-    {
-      id: 5,
-      name: 'Panda',
-      image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
-       description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
-    },
-    // Adicione mais animais conforme necessário
-  ]);
+const CardCarousel = ({ animal, lista }) => {
+
+  // const animals = useRef([
+  //   {
+  //     id: 1,
+  //     name: 'Cachorro',
+  //     image: '/pastor-alemão.jpg', // Substitua com o caminho correto ou URL da imagem
+  //     description: 'O pastor alemão é conhecido por sua inteligência e lealdade.',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Pit Bull',
+  //     image: '/pit-bull.avif',
+  //     description: 'O pit bull é um cão forte e corajoso, conhecido por sua lealdade.',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'gato',
+  //     image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
+  //     description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'gato',
+  //     image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
+  //     description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'gato',
+  //     image: 'https://example.com/panda.jpg', // Substitua com uma URL válida
+  //      description: 'Pandas são animais nativos da China, conhecidos por sua aparência fofa.',
+  //   },
+  //   // Adicione mais animais conforme necessário
+  // ]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [imagem, salvarImage] = useState([])
@@ -71,7 +75,7 @@ const CardCarousel = ({ animal }) => {
         }}
       >
         <div className="card-container">
-          {animals.current.map((animal) => (
+          {lista.map((animal) => (
             <SwiperSlide key={animal.id}>
               <div className="card" onClick={() => openModal(animal)}>
                 <img
