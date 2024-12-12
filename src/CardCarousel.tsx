@@ -36,6 +36,7 @@ const CardCarousel = ({ animal, lista }) => {
 
           768: {
             slidesPerView: 3,
+
           },
           480: {
             slidesPerView: 1,
@@ -51,6 +52,7 @@ const CardCarousel = ({ animal, lista }) => {
                   alt={animal.name}
                   className="card-image"
                   style={{ width: '100%', height: '120px' }}
+                  
                 />
                 <h3>{animal.name}</h3>
                 {/* <p>{animal.description}</p> */}

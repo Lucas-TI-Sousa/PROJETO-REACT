@@ -17,19 +17,19 @@
          "id": 3,
           "name": "Cachorro",
           "image": "/cachorro-1.jpg",
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "description": "O pastor alemão é conhecido por sua inteligência e lealdade."
         },
         {
          "id": 4,
           "name": "Cachorro",
-          "image": "https://example.com/panda.jpg", 
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/pastor-alemão.jpg", 
+          "description": "O pastor alemão é conhecido por sua inteligência e lealdade."
         },
         {
          "id": 5,
           "name": "Cachorro",
-          "image": "https://example.com/panda.jpg", 
-           "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/pit-bull.avif", 
+           "description": "O pit bull é um cão forte e corajoso, conhecido por sua lealdade."
         }
         
       ], 
@@ -38,31 +38,31 @@
           "id": 1,
           "name": "Gato",
           "image": "/gato-1.webp", 
-          "description": "O pastor alemão é conhecido por sua inteligência e lealdade."
+          "description": "O gato doméstico é um mamífero pertencente à família dos felinos, mesma família da onça-pintada, do leopardo e do leão."
         },
         {
          "id": 2,
           "name": "Gato",
           "image": "/gato-2.jpg",
-          "description": "O pit bull é um cão forte e corajoso, conhecido por sua lealdade."
+          "description": "O gato doméstico é um mamífero pertencente à família dos felinos, mesma família da onça-pintada, do leopardo e do leão."
         },
         {
          "id": 3,
           "name": "Gato",
           "image": "/gato-3.avif",
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "description": "O gato doméstico é um mamífero pertencente à família dos felinos, mesma família da onça-pintada, do leopardo e do leão."
         },
         {
          "id": 4,
           "name": "Gato",
-          "image": "https://example.com/panda.jpg", 
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/gato-1.webp", 
+          "description": "O gato doméstico é um mamífero pertencente à família dos felinos, mesma família da onça-pintada, do leopardo e do leão."
         },
         {
          "id": 5,
           "name": "Gato",
-          "image": "https://example.com/panda.jpg", 
-           "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/gato-2.jpg", 
+           "description": "O gato doméstico é um mamífero pertencente à família dos felinos, mesma família da onça-pintada, do leopardo e do leão."
         }
         
       ],
@@ -71,31 +71,31 @@
           "id": 1,
           "name": "Cobra",
           "image": "/cobra-1.webp", 
-          "description": "O pastor alemão é conhecido por sua inteligência e lealdade."
+          "description": "As serpentes é um dos animais mais antigos da humanidade e tem muitas curiosidades escondidas"
         },
         {
          "id": 2,
           "name": "Cobra",
           "image": "/cobra-2.jpg",
-          "description": "O pit bull é um cão forte e corajoso, conhecido por sua lealdade."
+          "description": "As serpentes é um dos animais mais antigos da humanidade e tem muitas curiosidades escondidas"
         },
         {
          "id": 3,
           "name": "Cobra",
           "image": "/cobra-3.webp",
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "description": "As serpentes é um dos animais mais antigos da humanidade e tem muitas curiosidades escondidas"
         },
         {
          "id": 4,
           "name": "Cobra",
-          "image": "https://example.com/panda.jpg", 
-          "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/cobra-1.webp", 
+          "description": "As serpentes é um dos animais mais antigos da humanidade e tem muitas curiosidades escondidas"
         },
         {
          "id": 5,
           "name": "Cobra",
-          "image": "https://example.com/panda.jpg", 
-           "description": "Pandas são animais nativos da China, conhecidos por sua aparência fofa."
+          "image": "/cobra-2.jpg", 
+           "description": "As serpentes é um dos animais mais antigos da humanidade e tem muitas curiosidades escondidas"
         }
         
       ]
