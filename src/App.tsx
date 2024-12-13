@@ -6,7 +6,9 @@ import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
   import CardCarousel from './CardCarousel'; 
   import { heart, heartDislike } from 'ionicons/icons'; 
   import axios from 'axios';
-  import { Drivers, Storage } from '@ionic/storage';
+  
+
+  
   
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,11 +41,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 setupIonicReact();
 const App = () => {
+  
   const buscar= useRef(true); 
-  const storage = new Storage({
-    name: '__mydb',
-    driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
-  });
+ 
   const [animais,setAnimais] = useState({
     cachorro: [],
     gato: [],
@@ -67,6 +67,8 @@ const App = () => {
    })  
    buscar.current = false;
 }, [buscar] );
+
+
 
 
 
